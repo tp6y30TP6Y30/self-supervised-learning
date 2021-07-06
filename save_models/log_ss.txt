@@ -1,0 +1,100 @@
+(python3.6) C:\Users\Chen Tzu-An\Desktop\self-supervised learning>python main.py --self-supervised
+[Train: self_supervised] 1/20: 100%|████████████████████| 563/563 [04:17<00:00,  2.19it/s]
+classify loss:  1.4415152551437567
+[Valid: self_supervised] 1/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.20it/s]
+classify loss:  1.2810337694864424
+
+[Train: self_supervised] 2/20: 100%|████████████████████| 563/563 [04:15<00:00,  2.20it/s]
+classify loss:  1.2534439183678974
+[Valid: self_supervised] 2/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.20it/s]
+classify loss:  1.2833950983153448
+
+[Train: self_supervised] 3/20: 100%|████████████████████| 563/563 [04:17<00:00,  2.18it/s]
+classify loss:  1.222377581346522
+[Valid: self_supervised] 3/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.26it/s]
+classify loss:  1.1631596017451513
+
+[Train: self_supervised] 4/20: 100%|████████████████████| 563/563 [04:19<00:00,  2.17it/s]
+classify loss:  1.2189679729155072
+[Valid: self_supervised] 4/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.28it/s]
+classify loss:  1.1792616697530898
+
+[Train: self_supervised] 5/20: 100%|████████████████████| 563/563 [04:19<00:00,  2.17it/s]
+classify loss:  1.1902531144038822
+[Valid: self_supervised] 5/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.25it/s]
+classify loss:  1.162160455234467
+
+[Train: self_supervised] 6/20: 100%|████████████████████| 563/563 [04:20<00:00,  2.16it/s]
+classify loss:  1.173485665084202
+[Valid: self_supervised] 6/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.20it/s]
+classify loss:  1.1424439355494485
+
+[Train: self_supervised] 7/20: 100%|████████████████████| 563/563 [04:18<00:00,  2.18it/s]
+classify loss:  1.1596240379035367
+[Valid: self_supervised] 7/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.17it/s]
+classify loss:  1.1537659570338235
+
+[Train: self_supervised] 8/20: 100%|████████████████████| 563/563 [04:18<00:00,  2.18it/s]
+classify loss:  1.1492894191301526
+[Valid: self_supervised] 8/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.23it/s]
+classify loss:  1.1275747815767925
+
+[Train: self_supervised] 9/20: 100%|████████████████████| 563/563 [04:18<00:00,  2.17it/s]
+classify loss:  1.1372226857800256
+[Valid: self_supervised] 9/20: 100%|██████████████████████| 63/63 [00:10<00:00,  6.00it/s]
+classify loss:  1.1303275859072095
+
+[Train: self_supervised] 10/20: 100%|███████████████████| 563/563 [04:22<00:00,  2.14it/s]
+classify loss:  1.12570702150914
+[Valid: self_supervised] 10/20: 100%|█████████████████████| 63/63 [00:10<00:00,  6.05it/s]
+classify loss:  1.113915384288818
+
+[Train: self_supervised] 11/20: 100%|███████████████████| 563/563 [04:22<00:00,  2.14it/s]
+classify loss:  1.1040158639157431
+[Valid: self_supervised] 11/20: 100%|█████████████████████| 63/63 [00:10<00:00,  6.25it/s]
+classify loss:  1.1052147206806002
+
+[Train: self_supervised] 12/20: 100%|███████████████████| 563/563 [04:23<00:00,  2.14it/s]
+classify loss:  1.0942983529919206
+[Valid: self_supervised] 12/20: 100%|█████████████████████| 63/63 [00:10<00:00,  6.20it/s]
+classify loss:  1.0818603218547882
+
+[Train: self_supervised] 13/20: 100%|███████████████████| 563/563 [04:19<00:00,  2.17it/s]
+classify loss:  1.0803135844149343
+[Valid: self_supervised] 13/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.90it/s]
+classify loss:  1.0660296281178792
+
+[Train: self_supervised] 14/20: 100%|███████████████████| 563/563 [04:27<00:00,  2.10it/s]
+classify loss:  1.0696036694951845
+[Valid: self_supervised] 14/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.87it/s]
+classify loss:  1.0527711657304613
+
+[Train: self_supervised] 15/20: 100%|███████████████████| 563/563 [04:30<00:00,  2.08it/s]
+classify loss:  1.0562111481256637
+[Valid: self_supervised] 15/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.90it/s]
+classify loss:  1.0620743582646053
+
+[Train: self_supervised] 16/20: 100%|███████████████████| 563/563 [04:26<00:00,  2.11it/s]
+classify loss:  1.044712401304533
+[Valid: self_supervised] 16/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.93it/s]
+classify loss:  1.071729660980285
+
+[Train: self_supervised] 17/20: 100%|███████████████████| 563/563 [04:30<00:00,  2.08it/s]
+classify loss:  1.0418165800414754
+[Valid: self_supervised] 17/20: 100%|█████████████████████| 63/63 [00:11<00:00,  5.73it/s]
+classify loss:  1.0218932626266328
+
+[Train: self_supervised] 18/20: 100%|███████████████████| 563/563 [04:27<00:00,  2.10it/s]
+classify loss:  1.0236450830742478
+[Valid: self_supervised] 18/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.86it/s]
+classify loss:  1.0444274426452698
+
+[Train: self_supervised] 19/20: 100%|███████████████████| 563/563 [04:26<00:00,  2.11it/s]
+classify loss:  1.018730142929626
+[Valid: self_supervised] 19/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.94it/s]
+classify loss:  1.0203819807086671
+
+[Train: self_supervised] 20/20: 100%|███████████████████| 563/563 [04:29<00:00,  2.09it/s]
+classify loss:  1.0059035282787168
+[Valid: self_supervised] 20/20: 100%|█████████████████████| 63/63 [00:10<00:00,  5.85it/s]
+classify loss:  1.0006791182926722
