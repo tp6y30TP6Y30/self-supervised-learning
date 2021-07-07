@@ -14,6 +14,11 @@ class SelfSupervisedData(Dataset):
         super(SelfSupervisedData, self).__init__()
         self.img_path = img_path
         self.img_list = listdir(img_path)
+        self.original = transforms.Compose([
+                            transforms.Resize((224, 224)),
+                            transforms.ToTensor(),
+                            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+                        ])
         self.rotate = transforms.Compose([
                             transforms.Resize((224, 224)),
                             transforms.ToTensor(),
@@ -33,7 +38,7 @@ class SelfSupervisedData(Dataset):
                             transforms.ToTensor(),
                             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                           ])
-        self.augments = [self.rotate, self.grayscale, self.randomcrop]
+        self.augments = [self.original, self.rotate, self.grayscale, self.randomcrop]
 
     def rot90_fn(self, x):
         return torch.rot90(x, 2, [1, 2])
@@ -43,7 +48,7 @@ class SelfSupervisedData(Dataset):
 
     def __getitem__(self, index):
         img = Image.open(join(self.img_path, self.img_list[index]))
-        augment = random.choice([i for i in range(3)])
+        augment = random.choice([i for i in range(4)])
         img = self.augments[augment](img)
         return img, augment
 
