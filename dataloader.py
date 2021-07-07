@@ -19,7 +19,7 @@ class SelfSupervisedData(Dataset):
                             transforms.ToTensor(),
                             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                         ])
-        self.rotate = transforms.Compose([
+        self.rotate180 = transforms.Compose([
                             transforms.Resize((224, 224)),
                             transforms.ToTensor(),
                             self.rot90_fn,
@@ -38,7 +38,7 @@ class SelfSupervisedData(Dataset):
                             transforms.ToTensor(),
                             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                           ])
-        self.augments = [self.original, self.rotate, self.grayscale, self.randomcrop]
+        self.augments = [self.original, self.rotate180, self.grayscale, self.randomcrop]
 
     def rot90_fn(self, x):
         return torch.rot90(x, 2, [1, 2])
