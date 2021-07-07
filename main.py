@@ -1,4 +1,5 @@
 import os
+from os.path import join
 from model import resnest
 from dataloader import SelfSupervisedData, SupervisedData
 import torch
@@ -38,6 +39,9 @@ def parse_args():
 
     parser.add_argument('--batchsize', default = 40, type = int,
                         help = "The training batchsize")
+
+    parser.add_argument('--lr', default = 1e-3, type = float,
+                        help = "The training learning rate")
 
     args = parser.parse_args()
     return args
@@ -80,7 +84,7 @@ def main():
     valid_dataset = SelfSupervisedData(args.valid_img_path) if args.self_supervised else SupervisedData(args.valid_img_path)
     num_classes = 4
     model = resnest.resnest50(num_classes = num_classes).to(device).float()
-    optimizer = torch.optim.Adam(filter(lambda param : param.requires_grad, model.parameters()), lr = 1e-3, betas = (0.5, 0.9))   
+    optimizer = torch.optim.Adam(filter(lambda param : param.requires_grad, model.parameters()), lr = args.lr, betas = (0.5, 0.9))   
     criterion = nn.CrossEntropyLoss().to(device).float()
     if args.test:
         pass
