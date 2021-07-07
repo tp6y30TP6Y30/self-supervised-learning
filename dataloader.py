@@ -14,21 +14,38 @@ class SelfSupervisedData(Dataset):
         super(SelfSupervisedData, self).__init__()
         self.img_path = img_path
         self.img_list = listdir(img_path)
-        self.transform = transforms.Compose([
+        self.rotate = transforms.Compose([
                             transforms.Resize((224, 224)),
+                            transforms.ToTensor(),
+                            self.rot90_fn,
+                            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+                         ])
+        self.grayscale = transforms.Compose([
+                            transforms.Resize((224, 224)),
+                            transforms.Grayscale(3),
                             transforms.ToTensor(),
                             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                          ])
+        self.randomcrop = transforms.Compose([
+                            transforms.Resize((224, 224)),
+                            transforms.RandomCrop((56, 56)),
+                            transforms.Resize((224, 224)),
+                            transforms.ToTensor(),
+                            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+                          ])
+        self.augments = [self.rotate, self.grayscale, self.randomcrop]
+
+    def rot90_fn(self, x):
+        return torch.rot90(x, 2, [1, 2])
 
     def __len__(self):
         return len(self.img_list)
 
     def __getitem__(self, index):
         img = Image.open(join(self.img_path, self.img_list[index]))
-        img = self.transform(img)
-        rotate = random.choice([i for i in range(4)])
-        img = torch.rot90(img, rotate, [1, 2])
-        return img, rotate
+        augment = random.choice([i for i in range(3)])
+        img = self.augments[augment](img)
+        return img, augment
 
 class SupervisedData(Dataset):
     def __init__(self, img_path):

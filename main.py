@@ -71,9 +71,9 @@ def valid(self_supervised, dataset, model, device, optimizer, criterion, args, e
             pred = model(img)
             loss = criterion(pred, label)
             loss_data += loss.item()
-            if not self_supervised: hit += sum(torch.argmax(pred, dim = 1) == label)
+            hit += sum(torch.argmax(pred, dim = 1) == label)
         print('classify loss: ', loss_data / len(dataloader))
-        if not self_supervised: print('Accuracy: {:.2f}%'.format(hit.true_divide(len(dataloader) * args.batchsize) * 100))
+        print('Accuracy: {:.2f}%'.format(hit.true_divide(len(dataloader) * args.batchsize) * 100))
         print()
 
 def main():
